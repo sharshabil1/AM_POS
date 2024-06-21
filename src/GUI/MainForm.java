@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.border.LineBorder;
 
 public class MainForm extends javax.swing.JFrame {
-    
+    //git is pure shit
     boolean setting_ = false;
     boolean userinfo_ = false;
     boolean sales_ = false;
