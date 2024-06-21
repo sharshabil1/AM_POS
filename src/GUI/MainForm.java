@@ -609,7 +609,7 @@ public class MainForm extends javax.swing.JFrame {
     private void reports_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reports_bActionPerformed
        
         updateMainPanel(new reportsGUI());
-        
+        //dfgkdfgddfgdfgdgd
         setting_ = false;
         userinfo_ = false;
         sales_ = false;
