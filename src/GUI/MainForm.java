@@ -10,6 +10,7 @@ import javax.swing.border.LineBorder;
 
 public class MainForm extends javax.swing.JFrame {
     //git is pure shit
+    //uwu
     boolean setting_ = false;
     boolean userinfo_ = false;
     boolean sales_ = false;
@@ -36,7 +37,6 @@ public class MainForm extends javax.swing.JFrame {
         UserInfo_p = new javax.swing.JPanel();
         UserInfo_b = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        label2 = new java.awt.Label();
         sales_p = new javax.swing.JPanel();
         sales_b = new javax.swing.JButton();
         inventory_p = new javax.swing.JPanel();
@@ -102,25 +102,15 @@ public class MainForm extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(47, 54, 64));
 
-        label2.setFont(new java.awt.Font("Dialog", 0, 36)); // NOI18N
-        label2.setForeground(new java.awt.Color(240, 240, 240));
-        label2.setText("Cafeteria System 1.0");
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 392, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(151, Short.MAX_VALUE)
-                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
+            .addGap(0, 220, Short.MAX_VALUE)
         );
 
         sales_p.setBackground(new java.awt.Color(47, 54, 64));
@@ -755,7 +745,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
-    private java.awt.Label label2;
     private javax.swing.JButton logout_b;
     private javax.swing.JPanel logout_p;
     private javax.swing.JButton reports_b;
