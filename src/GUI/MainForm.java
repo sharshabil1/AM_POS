@@ -37,7 +37,6 @@ public class MainForm extends javax.swing.JFrame {
         UserInfo_b = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         label2 = new java.awt.Label();
-        jLabel1 = new javax.swing.JLabel();
         sales_p = new javax.swing.JPanel();
         sales_b = new javax.swing.JButton();
         inventory_p = new javax.swing.JPanel();
@@ -107,28 +106,19 @@ public class MainForm extends javax.swing.JFrame {
         label2.setForeground(new java.awt.Color(240, 240, 240));
         label2.setText("Cafeteria System 1.0");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/cashier-machine (2).png"))); // NOI18N
-
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(43, 43, 43)
+                .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(151, Short.MAX_VALUE)
                 .addComponent(label2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
         );
@@ -762,7 +752,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel UserInfo_p;
     private javax.swing.JButton inventory_b;
     private javax.swing.JPanel inventory_p;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
