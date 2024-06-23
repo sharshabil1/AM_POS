@@ -177,6 +177,10 @@ public class PaymentWindow extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
+        SalesGUI sl = new SalesGUI();
+        
+        
         inv1 inv_ = new inv1();
         inv_.setVisible(true);
         this.setVisible(false);

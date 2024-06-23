@@ -61,7 +61,6 @@ public class MainForm extends javax.swing.JFrame {
         UserInfo_b.setBackground(new java.awt.Color(39, 73, 109));
         UserInfo_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         UserInfo_b.setForeground(new java.awt.Color(240, 240, 240));
-        UserInfo_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/user.png"))); // NOI18N
         UserInfo_b.setText("UserInfo");
         UserInfo_b.setToolTipText("");
         UserInfo_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
@@ -119,7 +118,6 @@ public class MainForm extends javax.swing.JFrame {
         sales_b.setBackground(new java.awt.Color(39, 73, 109));
         sales_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         sales_b.setForeground(new java.awt.Color(240, 240, 240));
-        sales_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/point-of-sale.png"))); // NOI18N
         sales_b.setText("Sales");
         sales_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         sales_b.setBorderPainted(false);
@@ -160,7 +158,6 @@ public class MainForm extends javax.swing.JFrame {
         inventory_b.setBackground(new java.awt.Color(39, 73, 109));
         inventory_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         inventory_b.setForeground(new java.awt.Color(240, 240, 240));
-        inventory_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/inventory.png"))); // NOI18N
         inventory_b.setText("Inventory");
         inventory_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         inventory_b.setBorderPainted(false);
@@ -201,7 +198,6 @@ public class MainForm extends javax.swing.JFrame {
         reports_b.setBackground(new java.awt.Color(39, 73, 109));
         reports_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         reports_b.setForeground(new java.awt.Color(240, 240, 240));
-        reports_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/dashboard.png"))); // NOI18N
         reports_b.setText("Reports");
         reports_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         reports_b.setBorderPainted(false);
@@ -242,7 +238,6 @@ public class MainForm extends javax.swing.JFrame {
         setting.setBackground(new java.awt.Color(39, 73, 109));
         setting.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         setting.setForeground(new java.awt.Color(240, 240, 240));
-        setting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/setting.png"))); // NOI18N
         setting.setText("Settings");
         setting.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         setting.setBorderPainted(false);
@@ -283,7 +278,6 @@ public class MainForm extends javax.swing.JFrame {
         logout_b.setBackground(new java.awt.Color(39, 73, 109));
         logout_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         logout_b.setForeground(new java.awt.Color(240, 240, 240));
-        logout_b.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/logout.png"))); // NOI18N
         logout_b.setText("Logout");
         logout_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         logout_b.setBorderPainted(false);
@@ -332,7 +326,6 @@ public class MainForm extends javax.swing.JFrame {
         Aboutb1.setBackground(new java.awt.Color(39, 73, 109));
         Aboutb1.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
         Aboutb1.setForeground(new java.awt.Color(240, 240, 240));
-        Aboutb1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/info.png"))); // NOI18N
         Aboutb1.setText("About");
         Aboutb1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
         Aboutb1.setBorderPainted(false);

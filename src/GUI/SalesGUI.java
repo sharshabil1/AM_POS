@@ -9,12 +9,18 @@ import java.awt.Color;
 import java.awt.Frame;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.table.DefaultTableModel;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
+
 
 /**
  *
  * @author igohs
  */
-public class SalesGUI extends javax.swing.JPanel {
+public final class SalesGUI extends javax.swing.JPanel {
 
     
         MainForm main = new MainForm();
@@ -30,8 +36,12 @@ public class SalesGUI extends javax.swing.JPanel {
         Color DeleteSel = new Color(192,57,43);
         Color secol = new Color(0,168,255);
         Color slectedcol = new Color(52,61,80);
+        
     public SalesGUI() {
+        //Inv1.setVisible(false);
         initComponents();
+        initializeTables();
+        
     }
 
     /**
@@ -43,8 +53,6 @@ public class SalesGUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -59,367 +67,37 @@ public class SalesGUI extends javax.swing.JPanel {
         checkout_p = new javax.swing.JPanel();
         checkout_b = new javax.swing.JButton();
         jSeparator3 = new javax.swing.JSeparator();
-        deletitem_p = new javax.swing.JPanel();
-        deletitem_b = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        sales_table = new javax.swing.JTable();
+        test_table = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        search_p = new javax.swing.JPanel();
-        search_b = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(47, 54, 64));
 
-        jScrollPane1.setBackground(new java.awt.Color(47, 54, 64));
-
-        jTable1.setAutoCreateRowSorter(true);
-        jTable1.setBackground(new java.awt.Color(47, 54, 64));
-        jTable1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(240, 240, 240));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                { new Integer(1), "Milk",  new Integer(1),  new Float(7.0)},
-                { new Integer(2), "Bread",  new Integer(3),  new Float(4.0)},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "N", "Product Name", "Quantity", "Price"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Float.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-        });
-        jTable1.setRowHeight(66);
-        jScrollPane1.setViewportView(jTable1);
-        if (jTable1.getColumnModel().getColumnCount() > 0) {
-            jTable1.getColumnModel().getColumn(0).setMinWidth(100);
-            jTable1.getColumnModel().getColumn(0).setPreferredWidth(100);
-            jTable1.getColumnModel().getColumn(0).setMaxWidth(100);
-        }
-
         jPanel1.setBackground(new java.awt.Color(47, 54, 64));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 240, 240));
         jLabel2.setText("Subtotal:");
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(240, 240, 240));
         jLabel3.setText("3 SAR");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(240, 240, 240));
         jLabel4.setText("Tax :");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(240, 240, 240));
         jLabel5.setText("15%");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(240, 240, 240));
         jLabel6.setText("Total:");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(240, 240, 240));
         jLabel7.setText("3.45 SAR");
 
@@ -427,7 +105,7 @@ public class SalesGUI extends javax.swing.JPanel {
         deletbill_p.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 54, 82), 2, true));
 
         deletbill_b.setBackground(new java.awt.Color(39, 73, 109));
-        deletbill_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
+        deletbill_b.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         deletbill_b.setForeground(new java.awt.Color(240, 240, 240));
         deletbill_b.setText("Delete Bill");
         deletbill_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
@@ -459,19 +137,19 @@ public class SalesGUI extends javax.swing.JPanel {
             deletbill_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deletbill_pLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(deletbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(deletbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE)
                 .addContainerGap())
         );
         deletbill_pLayout.setVerticalGroup(
             deletbill_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(deletbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+            .addComponent(deletbill_b)
         );
 
         newbill_p.setBackground(new java.awt.Color(0, 168, 255));
         newbill_p.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 54, 82), 2, true));
 
         newbill_b.setBackground(new java.awt.Color(39, 73, 109));
-        newbill_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
+        newbill_b.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         newbill_b.setForeground(new java.awt.Color(240, 240, 240));
         newbill_b.setText("New Bill");
         newbill_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
@@ -503,19 +181,19 @@ public class SalesGUI extends javax.swing.JPanel {
             newbill_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, newbill_pLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(newbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
+                .addComponent(newbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 149, Short.MAX_VALUE)
                 .addContainerGap())
         );
         newbill_pLayout.setVerticalGroup(
             newbill_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(newbill_b, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
+            .addComponent(newbill_b, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         checkout_p.setBackground(new java.awt.Color(243, 156, 18));
         checkout_p.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 54, 82), 2, true));
 
         checkout_b.setBackground(new java.awt.Color(0, 168, 255));
-        checkout_b.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
+        checkout_b.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
         checkout_b.setForeground(new java.awt.Color(240, 240, 240));
         checkout_b.setText("checkout");
         checkout_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
@@ -547,60 +225,75 @@ public class SalesGUI extends javax.swing.JPanel {
             checkout_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, checkout_pLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(checkout_b, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(checkout_b, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
                 .addContainerGap())
         );
         checkout_pLayout.setVerticalGroup(
             checkout_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(checkout_pLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addComponent(checkout_b, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addGap(0, 2, Short.MAX_VALUE))
         );
 
-        deletitem_p.setBackground(new java.awt.Color(231, 76, 60));
-        deletitem_p.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 54, 82), 2, true));
+        sales_table.setBackground(new java.awt.Color(47, 54, 64));
+        sales_table.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        sales_table.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "item", "Qty", "price"
+            }
+        ));
+        sales_table.setGridColor(new java.awt.Color(63, 77, 97));
+        jScrollPane1.setViewportView(sales_table);
 
-        deletitem_b.setBackground(new java.awt.Color(39, 73, 109));
-        deletitem_b.setFont(new java.awt.Font("SansSerif", 0, 32)); // NOI18N
-        deletitem_b.setForeground(new java.awt.Color(240, 240, 240));
-        deletitem_b.setText("Delete Item");
-        deletitem_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
-        deletitem_b.setBorderPainted(false);
-        deletitem_b.setContentAreaFilled(false);
-        deletitem_b.setDefaultCapable(false);
-        deletitem_b.setFocusPainted(false);
-        deletitem_b.setFocusable(false);
-        deletitem_b.setHideActionText(true);
-        deletitem_b.setRequestFocusEnabled(false);
-        deletitem_b.setVerifyInputWhenFocusTarget(false);
-        deletitem_b.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                deletitem_bMouseEntered(evt);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                deletitem_bMouseExited(evt);
-            }
-        });
-        deletitem_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deletitem_bActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout deletitem_pLayout = new javax.swing.GroupLayout(deletitem_p);
-        deletitem_p.setLayout(deletitem_pLayout);
-        deletitem_pLayout.setHorizontalGroup(
-            deletitem_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, deletitem_pLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(deletitem_b, javax.swing.GroupLayout.DEFAULT_SIZE, 206, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        deletitem_pLayout.setVerticalGroup(
-            deletitem_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(deletitem_b, javax.swing.GroupLayout.DEFAULT_SIZE, 67, Short.MAX_VALUE)
-        );
+        ));
+        test_table.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -608,52 +301,59 @@ public class SalesGUI extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(checkout_p, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7))
+                .addComponent(test_table, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(checkout_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(23, 23, 23))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(jLabel3))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel5)))
-                        .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel6)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jLabel7))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jLabel4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(jLabel5))))
+                        .addGap(61, 61, 61))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jSeparator3)
-                        .addContainerGap())))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(deletbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 54, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(deletitem_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(40, 40, 40))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(59, 59, 59)
-                    .addComponent(newbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(55, Short.MAX_VALUE)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jSeparator3)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(newbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(deletbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(102, 102, 102)
-                .addComponent(deletbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(newbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deletbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(test_table, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
@@ -661,91 +361,22 @@ public class SalesGUI extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(checkout_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(deletitem_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(23, 23, 23)
-                    .addComponent(newbill_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(541, Short.MAX_VALUE)))
+                .addContainerGap())
         );
 
         jPanel2.setBackground(new java.awt.Color(47, 54, 64));
-
-        jTextField1.setBackground(new java.awt.Color(59, 94, 132));
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(240, 240, 240));
-        jTextField1.setText("Search product");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        search_p.setBackground(new java.awt.Color(0, 168, 255));
-        search_p.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(28, 54, 82), 2, true));
-
-        search_b.setBackground(new java.awt.Color(0, 168, 255));
-        search_b.setFont(new java.awt.Font("SansSerif", 0, 36)); // NOI18N
-        search_b.setForeground(new java.awt.Color(240, 240, 240));
-        search_b.setText("search");
-        search_b.setActionCommand("delet item");
-        search_b.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80)), javax.swing.BorderFactory.createLineBorder(new java.awt.Color(20, 40, 80))));
-        search_b.setBorderPainted(false);
-        search_b.setContentAreaFilled(false);
-        search_b.setDefaultCapable(false);
-        search_b.setFocusPainted(false);
-        search_b.setFocusable(false);
-        search_b.setHideActionText(true);
-        search_b.setRequestFocusEnabled(false);
-        search_b.setVerifyInputWhenFocusTarget(false);
-        search_b.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                search_bMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                search_bMouseExited(evt);
-            }
-        });
-        search_b.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                search_bActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout search_pLayout = new javax.swing.GroupLayout(search_p);
-        search_p.setLayout(search_pLayout);
-        search_pLayout.setHorizontalGroup(
-            search_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(search_b, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
-        );
-        search_pLayout.setVerticalGroup(
-            search_pLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(search_b, javax.swing.GroupLayout.DEFAULT_SIZE, 64, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 552, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addComponent(search_p, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 71, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(search_p, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jTextField1))
-                .addContainerGap(40, Short.MAX_VALUE))
+            .addGap(0, 121, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -753,9 +384,7 @@ public class SalesGUI extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 704, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -763,71 +392,11 @@ public class SalesGUI extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jScrollPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void search_bMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_search_bMouseEntered
-        search_p.setBackground(slectedcol);
-    }//GEN-LAST:event_search_bMouseEntered
-
-    private void search_bMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_search_bMouseExited
-        if (search_ != true)
-        {
-            search_p.setBackground(secol);
-        }
-        else
-        search_p.setBackground(secol);
-    }//GEN-LAST:event_search_bMouseExited
-
-    private void search_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_search_bActionPerformed
-        checkout_ = false;
-        deletbill_ = false;
-        newbill_ = false;
-        search_ = true;
-        deletitem_ = false;
-        
-        deletbill_p.setBackground(DeleteMain);
-        checkout_p.setBackground(CheckoutMain);
-        deletitem_p.setBackground(DeleteMain);
-        newbill_p.setBackground(secol);
-        search_p.setBackground(secol);
-    }//GEN-LAST:event_search_bActionPerformed
-
-    private void deletitem_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deletitem_bActionPerformed
-        checkout_ = false;
-        deletbill_ = false;
-        newbill_ = false;
-        search_ = false;
-        deletitem_ = true;
-
-        deletbill_p.setBackground(DeleteMain);
-        checkout_p.setBackground(CheckoutMain);
-        deletitem_p.setBackground(DeleteMain);
-        newbill_p.setBackground(secol);
-        search_p.setBackground(secol);
-
-    }//GEN-LAST:event_deletitem_bActionPerformed
-
-    private void deletitem_bMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deletitem_bMouseExited
-        if (deletitem_ != true)
-        {
-            deletitem_p.setBackground(DeleteMain);
-        }
-        else
-        deletitem_p.setBackground(DeleteSel);
-    }//GEN-LAST:event_deletitem_bMouseExited
-
-    private void deletitem_bMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deletitem_bMouseEntered
-        deletitem_p.setBackground(DeleteSel);
-    }//GEN-LAST:event_deletitem_bMouseEntered
 
     private void checkout_bActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkout_bActionPerformed
         checkout_ = true;
@@ -835,13 +404,12 @@ public class SalesGUI extends javax.swing.JPanel {
         newbill_ = false;
         search_ = false;
         deletitem_ = false;
-
+        
         deletbill_p.setBackground(DeleteMain);
         checkout_p.setBackground(CheckoutMain);
-        deletitem_p.setBackground(DeleteMain);
-        newbill_p.setBackground(secol);
-        search_p.setBackground(secol);
 
+        newbill_p.setBackground(secol);
+        
         PaymentWindow pay = new PaymentWindow();
         pay.setVisible(true);
     }//GEN-LAST:event_checkout_bActionPerformed
@@ -868,9 +436,9 @@ public class SalesGUI extends javax.swing.JPanel {
 
         deletbill_p.setBackground(DeleteMain);
         checkout_p.setBackground(CheckoutMain);
-        deletitem_p.setBackground(DeleteMain);
+
         newbill_p.setBackground(secol);
-        search_p.setBackground(secol);
+
 
         main.updateMainPanel(new SalesGUI());
         main.setVisible(true);
@@ -899,9 +467,9 @@ public class SalesGUI extends javax.swing.JPanel {
 
         deletbill_p.setBackground(DeleteMain);
         checkout_p.setBackground(CheckoutMain);
-        deletitem_p.setBackground(DeleteMain);
+
         newbill_p.setBackground(secol);
-        search_p.setBackground(secol);
+
 
         // Get all open frames
         Frame[] frames = Frame.getFrames();
@@ -940,14 +508,55 @@ public class SalesGUI extends javax.swing.JPanel {
         deletbill_p.setBackground(DeleteSel);
     }//GEN-LAST:event_deletbill_bMouseEntered
 
+    
+    private void initializeTables() {
+        // Initialize table1 with some sample data
+        DefaultTableModel model1 = new DefaultTableModel(
+            new Object[][]{
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"John", 8, 30},
+                {"Jane", 5, 25},
+                {"lol",6,8}
+            },
+            new String[]{"item", "Qty", "price"}
+        );
+        sales_table.setModel(model1);
+    }
+    
+     public JTable getinv_table() {
+        return sales_table;
+    }   
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton checkout_b;
     private javax.swing.JPanel checkout_p;
     private javax.swing.JButton deletbill_b;
     private javax.swing.JPanel deletbill_p;
-    private javax.swing.JButton deletitem_b;
-    private javax.swing.JPanel deletitem_p;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -959,10 +568,9 @@ public class SalesGUI extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton newbill_b;
     private javax.swing.JPanel newbill_p;
-    private javax.swing.JButton search_b;
-    private javax.swing.JPanel search_p;
+    public javax.swing.JTable sales_table;
+    private javax.swing.JScrollPane test_table;
     // End of variables declaration//GEN-END:variables
 }
